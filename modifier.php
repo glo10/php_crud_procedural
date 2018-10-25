@@ -10,7 +10,7 @@
         isset($_POST['old'])        &&
         !empty($_POST['old'])
     ){
-        array_map($_POST,htmlspecialchars);
+        array_map('htmlspecialchars',$_POST);
         require_once 'connexion.php';
 
         $id = $_POST['id'];

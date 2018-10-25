@@ -8,7 +8,7 @@
         !empty($_POST['old']) 
     ){
         require_once 'connexion.php';
-        array_map($_POST,htmlspecialchars);
+        array_map('htmlspecialchars',$_POST);
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
         $old = $_POST['old'];
